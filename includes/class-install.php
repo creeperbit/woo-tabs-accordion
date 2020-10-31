@@ -7,7 +7,7 @@ defined('ABSPATH') || exit;
 /**
  * Class for upgrade / deactivation / uninstall
  */
-class Install {
+class WooT2A_Install {
 
 	/**
 	 * Creates DB und updates settings

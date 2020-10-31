@@ -6,7 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'CreeperBit\\WooT2A\\Install' => $baseDir . '/includes/class-install.php',
+    'CreeperBit\\WooT2A\\Admin\\WooT2A_Settings' => $baseDir . '/includes/admin/class-settings.php',
     'CreeperBit\\WooT2A\\SystemRequirements' => $baseDir . '/includes/class-system-requirements.php',
     'CreeperBit\\WooT2A\\SystemTests' => $baseDir . '/includes/class-system-tests.php',
+    'CreeperBit\\WooT2A\\WooT2A_Install' => $baseDir . '/includes/class-install.php',
 );

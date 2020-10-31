@@ -53,7 +53,7 @@ if (!$system_tests->is_woocommerce_activated()) {
     deactivate_plugins(__FILE__);
     die(
         esc_html__(
-            'WooCommerce Tabs Accordions requires WooCommerce plugin enabled.',
+            'WooCommerce Tabs Accordions requires <a href="https://wordpress.org/plugins/woocommerce/" target="_blank">WooCommerce</a> to be activated in order to work.',
             'woo-tabs-accordions'
         )
     );

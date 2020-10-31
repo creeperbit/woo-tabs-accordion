@@ -7,11 +7,13 @@ It gives your customers a better experience by giving you powerful tools to cust
 ## Plugin Features
 
 - Replace your default product page tabs and provide the customers with a new way to view the contents.
-- Customize accordion styles to fit the look and feel of your site design.
+- Responsive & mobile ready.
 - Clean and intuitive admin panel.
-- Responsive & Mobile ready.
-- Compatible with any Theme.
-- Custom CSS field to override styles.
+- Customize accordion styles to fit the look and feel of your site design.
+- Allows you to choose from two different theme.
+- Multiple accordions collapsible or toggle.
+- Accordion mode on page load.
+- Compatible with any theme.
 - And much more options.
 
 ## Plugin Development

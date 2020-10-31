@@ -115,11 +115,9 @@ class SystemTests
      */
     public function is_woocommerce_activated()
     {
-
-        return (bool) in_array(
-            'woocommerce/woocommerce.php',
-            apply_filters('active_plugins', get_option('active_plugins'))
-        );
+        include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+        
+        return (bool) is_plugin_active( 'woocommerce/woocommerce.php' );
     }
 
 }
