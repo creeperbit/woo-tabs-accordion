@@ -3,25 +3,24 @@
 defined('ABSPATH') || exit;
 
 /**
- * Main Woo Tabs Accordions Plugin Class
+ * Main Woo Tabs Accordion Plugin Class
  *
- * @class WooTabsAccordions
+ * @class WooTabsAccordion
  */
-final class WooTabsAccordions
+final class WooTabsAccordion
 {
     /**
-     * @var WooTabsAccordions
+     * @var WooTabsAccordion
      */
     private static $_instance = null;
 
     /**
-     * WooTabsAccordions Constructor
+     * WooTabsAccordion Constructor
      */
     public function __construct()
     {
         $this->define_constants();
-        //$this->set_autoloader();
-        $this->init_hooks();
+        $this->init();
 
     }
 
@@ -39,21 +38,7 @@ final class WooTabsAccordions
     }
 
     /**
-     * Set autoloader
-     *
-     * @return void
-     */
-    private function set_autoloader()
-    {
-
-        // MEGA Redirects Autoloader
-        require_once WOOT2A_DIR . 'includes/class-autoload.php';
-
-        spl_autoload_register(array(new WooT2A_Autoloader(), 'init'));
-    }
-
-    /**
-     * Define WooTabsAccordions Constants.
+     * Define WooTabsAccordion Constants.
      */
     private function define_constants()
     {
@@ -88,22 +73,64 @@ final class WooTabsAccordions
     }
 
     /**
-     * Hook into actions and filters.
+     * Init WooCommerce Tabs Accordion when WordPress Initialises.
      */
-    private function init_hooks()
+    private function init()
     {
-        //include_once WOOT2A_ABSPATH . 'includes/class-install.php';
-        register_activation_hook(__FILE__, array('WooT2A_Install', 'activate'));
+        add_action('init', array($this, 'check_system_requirements'), 5);
+        register_activation_hook(WOOT2A_PLUGIN_BASENAME, array('CreeperBit\WooT2A\WooT2A_Install', 'activate'));
+        add_action('init', array($this, 'init_hooks'), 20);
+        register_deactivation_hook(WOOT2A_PLUGIN_BASENAME, array('CreeperBit\WooT2A\WooT2A_Install', 'deactivate'));
+    }
 
-        add_action('init', array($this, 'init'), 0);
+    public function check_system_requirements()
+    {
+        $message = '';
 
-        register_deactivation_hook(__FILE__, array('WooT2A_Install', 'deactivate'));
+        $system_requirements = new CreeperBit\WooT2A\SystemRequirements();
+        $system_tests = new CreeperBit\WooT2A\SystemTests($system_requirements);
+
+        // Don't activate on anything less than PHP 5.6 or WordPress 4.7
+        if (!$system_tests->is_php_version_compatible() || !$system_tests->is_wp_version_compatible()) {
+            $message .= '<div class="notice notice-error is-dismissible"><p>';
+            $message .= sprintf(
+                esc_html__(
+                    'WooCommerce Tabs Accordion requires PHP version %1$s with spl extension or greater and WordPress %2$s or greater.',
+                    'woo-tabs-accordion'
+                ),
+                $system_requirements->php_minimum_version(),
+                $system_requirements->wp_minimum_version()
+            );
+            $message .= '</p></div>';
+            deactivate_plugins(WOOT2A_PLUGIN_BASENAME);
+        }
+
+        // Don't activate if woocommerce is disabled
+        if (!$system_tests->is_woocommerce_activated()) {
+            $message .= '<div class="notice notice-error is-dismissible"><p>';
+            $message .= __(
+                'WooCommerce Tabs Accordion requires <a href="https://wordpress.org/plugins/woocommerce/" target="_blank">WooCommerce</a> to be activated in order to work.',
+                'woo-tabs-accordion'
+            );
+            $message .= '</p></div>';
+            deactivate_plugins(WOOT2A_PLUGIN_BASENAME);
+        }
+
+        if ($message != '') {
+            echo $message;
+
+            if (isset($_GET['activate'])) {
+                unset($_GET['activate']);
+            }
+        } else {
+            add_action('plugin_action_links_' . WOOT2A_PLUGIN_BASENAME, array('CreeperBit\WooT2A\WooT2A_Install', 'plugin_action_links'));
+        }
     }
 
     /**
-     * Init WooCommerce when WordPress Initialises.
+     * Hook into actions and filters.
      */
-    public function init()
+    public function init_hooks()
     {
         // Before init action.
         do_action('before_woot2a_init');
@@ -133,11 +160,11 @@ final class WooTabsAccordions
     private function load_plugin_textdomain()
     {
 
-        if (is_textdomain_loaded('woo-tabs-accordions')) {
+        if (is_textdomain_loaded('woo-tabs-accordion')) {
             return true;
         }
 
-        return load_plugin_textdomain('woo-tabs-accordions', false, WOOT2A_ABSPATH . 'languages');
+        return load_plugin_textdomain('woo-tabs-accordion', false, WOOT2A_ABSPATH . 'languages');
 
     }
 

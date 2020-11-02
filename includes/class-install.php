@@ -21,4 +21,19 @@ class WooT2A_Install {
 	 * @return void
 	 */
 	public static function deactivate() {}
+
+	/**
+	 * Show action links on the plugin screen.
+	 *
+	 * @param mixed $links Plugin Action links.
+	 *
+	 * @return array
+	 */
+	public static function plugin_action_links( $links ) {
+		$action_links = array(
+			'settings' => '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=woo-tabs-accordion' ) . '" aria-label="' . esc_attr__( 'View WooCommerce Tabs Accordion settings', 'woo-tabs-accordion' ) . '">' . esc_html__( 'Settings', 'woo-tabs-accordion' ) . '</a>',
+		);
+
+		return array_merge( $action_links, $links );
+	}
 }

@@ -20,8 +20,8 @@ class WooT2A_Settings_Page extends WC_Settings_Page
      */
     public function __construct()
     {
-        $this->id = 'woo-tabs-accordions';
-        $this->label = __('Woo Tabs Accordions', 'woo-tabs-accordions');
+        $this->id = 'woo-tabs-accordion';
+        $this->label = __('Woo Tabs Accordion', 'woo-tabs-accordion');
         add_filter('woocommerce_settings_tabs_array', array($this, 'add_settings_page'), 20);
         add_action('woocommerce_settings_' . $this->id, array($this, 'output'));
         add_action('woocommerce_settings_save_' . $this->id, array($this, 'save'));
@@ -44,45 +44,45 @@ class WooT2A_Settings_Page extends WC_Settings_Page
                     'id' => 'woot2a_title',
                 ),
                 array(
-                    'title' => __('Enable', 'woo-tabs-accordions'),
-                    'desc' => __('Enable Accordions.', 'woo-tabs-accordions'),
+                    'title' => __('Enable', 'woo-tabs-accordion'),
+                    'desc' => __('Enable Accordion.', 'woo-tabs-accordion'),
                     'type' => 'checkbox',
                     'id' => 'woot2a[enabled]',
                     'default' => 'no',
                 ),
                 array(
-                    'title' => __('Choose a theme', 'woo-tabs-accordions'),
-                    'desc' => __('Select an accordion theme style.', 'woo-tabs-accordions'),
+                    'title' => __('Choose a theme', 'woo-tabs-accordion'),
+                    'desc' => __('Select an accordion theme style.', 'woo-tabs-accordion'),
                     'type' => 'select',
                     'options'  => array(
-                        'theme_one'  => __( 'Theme One', 'woo-tabs-accordions' ),
-                        'theme_two'   => __( 'Theme Two', 'woo-tabs-accordions' ),
+                        'theme_one'  => __( 'Theme One', 'woo-tabs-accordion' ),
+                        'theme_two'   => __( 'Theme Two', 'woo-tabs-accordion' ),
                     ),
                     'id' => 'woot2a[theme]',
                     'default' => 'theme_one',
                 ),
                 array(
-                    'title' => __('Accordion Mode', 'woo-tabs-accordions'),
-                    'desc' => __('Expand or collapse accordion option on page load.', 'woo-tabs-accordions'),
+                    'title' => __('Accordion Mode', 'woo-tabs-accordion'),
+                    'desc' => __('Expand or collapse accordion option on page load.', 'woo-tabs-accordion'),
                     'type' => 'radio',
                     'options'         => array(
-                        'first'     => __( 'First Open', 'woo-tabs-accordions' ),
-                        'all'      => __( 'All Open', 'woo-tabs-accordions' ),
-                        'folded' => __( 'All Folded', 'woo-tabs-accordions' ),
+                        'first'     => __( 'First Open', 'woo-tabs-accordion' ),
+                        'all'      => __( 'All Open', 'woo-tabs-accordion' ),
+                        'folded' => __( 'All Folded', 'woo-tabs-accordion' ),
                     ),
                     'id' => 'woot2a[mode]',
                     'default' => 'first',
                     'desc_tip'        => true,
                 ),
                 array(
-                    'title' => __('Enable Collapsible', 'woo-tabs-accordions'),
-                    'desc' => __('Check to open multiple accordions together', 'woo-tabs-accordions'),
+                    'title' => __('Enable Collapsible', 'woo-tabs-accordion'),
+                    'desc' => __('Check to open multiple accordions together', 'woo-tabs-accordion'),
                     'type' => 'checkbox',
                     'id' => 'woot2a[multiple_expand]',
                     'default' => 'no',
                 ),
                 array(
-                    'title' => __('Background Color', 'woo-tabs-accordions'),
+                    'title' => __('Background Color', 'woo-tabs-accordion'),
                     'id' => 'woot2a[bg_color]',
                     'type' => 'color',
                     'default' => '#666666',
@@ -90,7 +90,7 @@ class WooT2A_Settings_Page extends WC_Settings_Page
                     'desc_tip' => true,
                 ),
                 array(
-                    'title' => __('Active Background Color', 'woo-tabs-accordions'),
+                    'title' => __('Active Background Color', 'woo-tabs-accordion'),
                     'id' => 'woot2a[bg_color_active]',
                     'type' => 'color',
                     'default' => '#000000',
@@ -98,7 +98,7 @@ class WooT2A_Settings_Page extends WC_Settings_Page
                     'desc_tip' => true,
                 ),
                 array(
-                    'title' => __('Title Color', 'woo-tabs-accordions'),
+                    'title' => __('Title Color', 'woo-tabs-accordion'),
                     'id' => 'woot2a[title_color]',
                     'type' => 'color',
                     'default' => '#FFFFFF',
@@ -106,7 +106,7 @@ class WooT2A_Settings_Page extends WC_Settings_Page
                     'desc_tip' => true,
                 ),
                 array(
-                    'title' => __('Active Title Color', 'woo-tabs-accordions'),
+                    'title' => __('Active Title Color', 'woo-tabs-accordion'),
                     'id' => 'woot2a[title_color_active]',
                     'type' => 'color',
                     'default' => '#FFFFFF',
@@ -114,7 +114,7 @@ class WooT2A_Settings_Page extends WC_Settings_Page
                     'desc_tip' => true,
                 ),
                 array(
-                    'title' => __('Arrow Color', 'woo-tabs-accordions'),
+                    'title' => __('Arrow Color', 'woo-tabs-accordion'),
                     'id' => 'woot2a[arrow_color]',
                     'type' => 'color',
                     'default' => '#FFFFFF',
@@ -122,7 +122,7 @@ class WooT2A_Settings_Page extends WC_Settings_Page
                     'desc_tip' => true,
                 ),
                 array(
-                    'title' => __('Active Arrow Color', 'woo-tabs-accordions'),
+                    'title' => __('Active Arrow Color', 'woo-tabs-accordion'),
                     'id' => 'woot2a[arrow_color_active]',
                     'type' => 'color',
                     'default' => '#FFFFFF',

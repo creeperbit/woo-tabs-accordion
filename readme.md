@@ -1,6 +1,6 @@
-# WooCommerce Tabs Accordions
+# WooCommerce Tabs Accordion
 
-WooCommerce Tabs Accordions would help you to easily convert your woocommerce product page tabs to accordions.
+WooCommerce Tabs Accordion would help you to easily convert your woocommerce product page tabs into an accordion.
 
 It gives your customers a better experience by giving you powerful tools to customize accordion styles.
 
@@ -18,7 +18,7 @@ It gives your customers a better experience by giving you powerful tools to cust
 
 ## Plugin Development
 
-If you're a theme author, plugin author, or just a code hobbyist, you can follow the development of this plugin on it's [GitHub repository](https://github.com/creeperbit/woo-tabs-accordions).
+If you're a theme author, plugin author, or just a code hobbyist, you can follow the development of this plugin on it's [GitHub repository](https://github.com/creeperbit/woo-tabs-accordion).
 
 ## License
 
@@ -30,9 +30,9 @@ Designed and Developed by [__CreeperBit__](https://creeperbit.com/)
 
 ## Installation
 
-1. Upload `woo-tabs-accordions` to the `/wp-content/plugins/` directory.
+1. Upload `woo-tabs-accordion` to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Go to "WooCommerce > Settings > Products > WooCommerce Tabs Accordions" to configure settings you'd like to use.
+3. Go to "WooCommerce > Settings > Products > WooCommerce Tabs Accordion" to configure settings you'd like to use.
 
 ## Frequently Asked Questions
 
@@ -46,11 +46,11 @@ Requires PHP 5.6+
 
 ### Can I customize the colors of the accordion?
 
-Yes, WooCommerce Tabs Accordions plugin is fully customizable. Change accordion mode, colors, backgrounds, icon positions, and more…
+Yes, WooCommerce Tabs Accordion plugin is fully customizable. Change accordion mode, colors, backgrounds, icon positions, and more…
 
-### Is WooCommerce Tabs Accordions totally responsive?
+### Is WooCommerce Tabs Accordion totally responsive?
 
-**WooCommerce Tabs Accordions** is 100% responsive, so it will fit perfectly into your page, regardless of the size of your desktop screen or device.
+**WooCommerce Tabs Accordion** is 100% responsive, so it will fit perfectly into your page, regardless of the size of your desktop screen or device.
 
 ### Does it work with any theme?
 
@@ -58,4 +58,4 @@ Absolutely! It will work with any theme that is built with WordPress standard.
 
 ### Do you want to encourage the developer team for future improvement?
 
-If you love this plugin and want to help others, please [__post a review__](https://wordpress.org/support/plugin/woo-tabs-accordions/reviews/?filter=5) for it.
+If you love this plugin and want to help others, please [__post a review__](https://wordpress.org/support/plugin/woo-tabs-accordion/reviews/?filter=5) for it.
