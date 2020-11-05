@@ -16,10 +16,6 @@ It gives your customers a better experience by giving you powerful tools to cust
 - Compatible with any theme.
 - And much more options.
 
-## Plugin Development
-
-If you're a theme author, plugin author, or just a code hobbyist, you can follow the development of this plugin on it's [GitHub repository](https://github.com/creeperbit/woo-tabs-accordion).
-
 ## License
 
 This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
@@ -55,7 +51,3 @@ Yes, WooCommerce Tabs Accordion plugin is fully customizable. Change accordion m
 ### Does it work with any theme?
 
 Absolutely! It will work with any theme that is built with WordPress standard.
-
-### Do you want to encourage the developer team for future improvement?
-
-If you love this plugin and want to help others, please [__post a review__](https://wordpress.org/support/plugin/woo-tabs-accordion/reviews/?filter=5) for it.
