@@ -22,6 +22,7 @@ class ComposerStaticInit9e45468ab571c642589d89dc2964994d
 
     public static $classMap = array (
         'CreeperBit\\WooT2A\\Admin\\WooT2A_Settings' => __DIR__ . '/../..' . '/includes/admin/class-settings.php',
+        'CreeperBit\\WooT2A\\Frontend\\WooT2A_Template' => __DIR__ . '/../..' . '/includes/frontend/class-template.php',
         'CreeperBit\\WooT2A\\SystemRequirements' => __DIR__ . '/../..' . '/includes/class-system-requirements.php',
         'CreeperBit\\WooT2A\\SystemTests' => __DIR__ . '/../..' . '/includes/class-system-tests.php',
         'CreeperBit\\WooT2A\\WooT2A_Install' => __DIR__ . '/../..' . '/includes/class-install.php',

@@ -22,13 +22,6 @@ class WooT2A_Settings
     {
         // Add backend settings
         add_filter('woocommerce_get_settings_pages', array($this, 'settings_page'));
-
-        //add more actions
-        /*add_action( 'admin_init', array( $this, 'admin_init' ) );
-    add_action( 'admin_enqueue_scripts', array( __CLASS__, 'admin_scripts' ) );
-
-    //Save settings
-    add_action( 'admin_post_woot2a', array( $this, 'save_post_form' ) );*/
     }
 
     /**

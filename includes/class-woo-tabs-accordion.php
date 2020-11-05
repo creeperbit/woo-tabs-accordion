@@ -140,7 +140,8 @@ final class WooTabsAccordion
 
         // Classes/actions loaded for the frontend and for ajax requests.
         if ($this->is_request('frontend')) {
-            //add_action( 'wp_enqueue_scripts',  array( $this, 'enque_scripts' ) );
+            // Init frontend
+            CreeperBit\WooT2A\Frontend\WooT2A_Template::instance();
         }
 
         if ($this->is_request('admin')) {

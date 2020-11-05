@@ -1,0 +1,56 @@
+.theme-two .drawer {
+    border: 1px solid;
+    border-top: none;
+}
+
+.theme-two .drawer:first-child {
+    border-top: 1px solid;
+}
+
+.theme-two .accordion-header {
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+.theme-two .accordion-header h1 {
+    margin: 0;
+    padding: 15px 0;
+}
+
+.theme-two .accordion-content {
+    display: none;
+    border-top: none;
+    padding: 15px;
+}
+
+.theme-two .accordion-content p {
+    margin: 0;
+    margin-bottom: 3px;
+}
+
+.theme-two .accordion-header-icon {
+    font-family: Helvetica;
+    font-size: 25pt;
+    line-height: 16pt;
+    height: 35px;
+    right: 20px;
+    margin-top: -58px;
+    position: absolute;
+    text-align: center;
+    width: 35px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+[dir='rtl'] .theme-two .accordion-header-icon {
+    right: auto;
+    left: 20px;
+}
+
+.theme-two .accordion-header-icon.accordion-header-icon-active {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    margin-top: -58px;
+}

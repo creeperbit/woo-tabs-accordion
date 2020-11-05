@@ -1,0 +1,11 @@
+.drawer {
+    width: 100%;
+}
+
+.drawer:last-child {
+    margin-bottom: 40px;
+}
+
+#woot2a-tab-reviews .woocommerce-Reviews h2.woocommerce-Reviews-title {
+    display: none;
+}
