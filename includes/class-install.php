@@ -31,7 +31,7 @@ class WooT2A_Install {
 	 */
 	public static function plugin_action_links( $links ) {
 		$action_links = array(
-			'settings' => '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=woo-tabs-accordion' ) . '" aria-label="' . esc_attr__( 'View WooCommerce Tabs Accordion settings', 'woo-tabs-accordion' ) . '">' . esc_html__( 'Settings', 'woo-tabs-accordion' ) . '</a>',
+			'settings' => '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=creeperbit-woo-accordion' ) . '" aria-label="' . esc_attr__( 'View CreeperBit Accordion Tabs for WooCommerce settings', 'creeperbit-woo-accordion' ) . '">' . esc_html__( 'Settings', 'creeperbit-woo-accordion' ) . '</a>',
 		);
 
 		return array_merge( $action_links, $links );

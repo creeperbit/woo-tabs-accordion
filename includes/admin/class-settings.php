@@ -41,7 +41,7 @@ class WooT2A_Settings
      * Add new admin setting page
      *
      * @param array   $settings an array of existing setting pages.
-     * @return array of setting pages along with woo-tabs-accordion settings page.
+     * @return array of setting pages along with creeperbit-woo-accordion settings page.
      *
      */
     public function settings_page($settings)

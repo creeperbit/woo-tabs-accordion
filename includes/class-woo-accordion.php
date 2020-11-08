@@ -3,19 +3,19 @@
 defined('ABSPATH') || exit;
 
 /**
- * Main Woo Tabs Accordion Plugin Class
+ * Main Woo Accordion Plugin Class
  *
- * @class WooTabsAccordion
+ * @class WooAccordion
  */
-final class WooTabsAccordion
+final class WooAccordion
 {
     /**
-     * @var WooTabsAccordion
+     * @var WooAccordion
      */
     private static $_instance = null;
 
     /**
-     * WooTabsAccordion Constructor
+     * WooAccordion Constructor
      */
     public function __construct()
     {
@@ -38,7 +38,7 @@ final class WooTabsAccordion
     }
 
     /**
-     * Define WooTabsAccordion Constants.
+     * Define WooAccordion Constants.
      */
     private function define_constants()
     {
@@ -73,11 +73,11 @@ final class WooTabsAccordion
     }
 
     /**
-     * Init WooCommerce Tabs Accordion when WordPress Initialises.
+     * Init Woo Accordion when WordPress Initialises.
      */
     private function init()
     {
-        add_action('init', array($this, 'check_system_requirements'), 5);
+        add_action('admin_notices', array($this, 'check_system_requirements'), 5);
         register_activation_hook(WOOT2A_PLUGIN_BASENAME, array('CreeperBit\WooT2A\WooT2A_Install', 'activate'));
         add_action('init', array($this, 'init_hooks'), 20);
         register_deactivation_hook(WOOT2A_PLUGIN_BASENAME, array('CreeperBit\WooT2A\WooT2A_Install', 'deactivate'));
@@ -95,8 +95,8 @@ final class WooTabsAccordion
             $message .= '<div class="notice notice-error is-dismissible"><p>';
             $message .= sprintf(
                 esc_html__(
-                    'WooCommerce Tabs Accordion requires PHP version %1$s with spl extension or greater and WordPress %2$s or greater.',
-                    'woo-tabs-accordion'
+                    'CreeperBit Accordion Tabs for WooCommerce requires PHP version %1$s with spl extension or greater and WordPress %2$s or greater.',
+                    'creeperbit-woo-accordion'
                 ),
                 $system_requirements->php_minimum_version(),
                 $system_requirements->wp_minimum_version()
@@ -109,8 +109,8 @@ final class WooTabsAccordion
         if (!$system_tests->is_woocommerce_activated()) {
             $message .= '<div class="notice notice-error is-dismissible"><p>';
             $message .= __(
-                'WooCommerce Tabs Accordion requires <a href="https://wordpress.org/plugins/woocommerce/" target="_blank">WooCommerce</a> to be activated in order to work.',
-                'woo-tabs-accordion'
+                'CreeperBit Accordion Tabs for WooCommerce requires <a href="https://wordpress.org/plugins/woocommerce/" target="_blank">WooCommerce</a> to be activated in order to work.',
+                'creeperbit-woo-accordion'
             );
             $message .= '</p></div>';
             deactivate_plugins(WOOT2A_PLUGIN_BASENAME);
@@ -161,11 +161,11 @@ final class WooTabsAccordion
     private function load_plugin_textdomain()
     {
 
-        if (is_textdomain_loaded('woo-tabs-accordion')) {
+        if (is_textdomain_loaded('creeperbit-woo-accordion')) {
             return true;
         }
 
-        return load_plugin_textdomain('woo-tabs-accordion', false, WOOT2A_ABSPATH . 'languages');
+        return load_plugin_textdomain('creeperbit-woo-accordion', false, WOOT2A_ABSPATH . 'languages');
 
     }
 

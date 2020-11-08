@@ -1,6 +1,6 @@
-# WooCommerce Tabs Accordion
+# CreeperBit Accordion Tabs for WooCommerce
 
-WooCommerce Tabs Accordion would help you to easily convert your woocommerce product page tabs into an accordion.
+CreeperBit Accordion Tabs for WooCommerce would help you to easily convert your woocommerce product page tabs into an accordion.
 
 It gives your customers a better experience by giving you powerful tools to customize accordion styles.
 
@@ -18,7 +18,7 @@ It gives your customers a better experience by giving you powerful tools to cust
 
 ## License
 
-This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
+This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/gpl-2.0.html), version 2 or later.
 
 ## AUTHOR
 
@@ -26,9 +26,9 @@ Designed and Developed by [__CreeperBit__](https://creeperbit.com/)
 
 ## Installation
 
-1. Upload `woo-tabs-accordion` to the `/wp-content/plugins/` directory.
+1. Upload `creeperbit-woo-accordion` to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Go to "WooCommerce > Settings > Products > WooCommerce Tabs Accordion" to configure settings you'd like to use.
+3. Go to "WooCommerce > Settings > Accordion Tabs" to configure settings you'd like to use.
 
 ## Frequently Asked Questions
 
@@ -42,11 +42,11 @@ Requires PHP 5.6+
 
 ### Can I customize the colors of the accordion?
 
-Yes, WooCommerce Tabs Accordion plugin is fully customizable. Change accordion mode, colors, backgrounds, icon positions, and more…
+Yes, CreeperBit Accordion Tabs for WooCommerce plugin is fully customizable. Change accordion mode, colors, backgrounds, icon positions, and more…
 
-### Is WooCommerce Tabs Accordion totally responsive?
+### Is CreeperBit Accordion Tabs for WooCommerce totally responsive?
 
-**WooCommerce Tabs Accordion** is 100% responsive, so it will fit perfectly into your page, regardless of the size of your desktop screen or device.
+**CreeperBit Accordion Tabs for WooCommerce** is 100% responsive, so it will fit perfectly into your page, regardless of the size of your desktop screen or device.
 
 ### Does it work with any theme?
 

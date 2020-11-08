@@ -20,8 +20,8 @@ class WooT2A_Settings_Page extends WC_Settings_Page
      */
     public function __construct()
     {
-        $this->id = 'woo-tabs-accordion';
-        $this->label = __('Woo Tabs Accordion', 'woo-tabs-accordion');
+        $this->id = 'creeperbit-woo-accordion';
+        $this->label = __('Accordion Tabs', 'creeperbit-woo-accordion');
         $this->init_hooks();
         $this->enable_alpha_channel_wp_color_picker();
     }
@@ -50,45 +50,45 @@ class WooT2A_Settings_Page extends WC_Settings_Page
                     'id' => 'woot2a_title',
                 ),
                 array(
-                    'title' => __('Enable', 'woo-tabs-accordion'),
-                    'desc' => __('Enable Accordion.', 'woo-tabs-accordion'),
+                    'title' => __('Enable', 'creeperbit-woo-accordion'),
+                    'desc' => __('Enable Accordion.', 'creeperbit-woo-accordion'),
                     'type' => 'checkbox',
                     'id' => 'woot2a[enabled]',
                     'default' => 'no',
                 ),
                 array(
-                    'title' => __('Choose a theme', 'woo-tabs-accordion'),
-                    'desc' => __('Select an accordion theme style.', 'woo-tabs-accordion'),
+                    'title' => __('Choose a theme', 'creeperbit-woo-accordion'),
+                    'desc' => __('Select an accordion theme style.', 'creeperbit-woo-accordion'),
                     'type' => 'select',
                     'options' => array(
-                        'theme-one' => __('Theme One', 'woo-tabs-accordion'),
-                        'theme-two' => __('Theme Two', 'woo-tabs-accordion'),
+                        'theme-one' => __('Theme One', 'creeperbit-woo-accordion'),
+                        'theme-two' => __('Theme Two', 'creeperbit-woo-accordion'),
                     ),
                     'id' => 'woot2a[theme]',
                     'default' => 'theme-one',
                 ),
                 array(
-                    'title' => __('Accordion Mode', 'woo-tabs-accordion'),
-                    'desc' => __('Expand or collapse accordion option on page load.', 'woo-tabs-accordion'),
+                    'title' => __('Accordion Mode', 'creeperbit-woo-accordion'),
+                    'desc' => __('Expand or collapse accordion option on page load.', 'creeperbit-woo-accordion'),
                     'type' => 'radio',
                     'options' => array(
-                        'first' => __('First Open', 'woo-tabs-accordion'),
-                        'all' => __('All Open', 'woo-tabs-accordion'),
-                        'folded' => __('All Folded', 'woo-tabs-accordion'),
+                        'first' => __('First Open', 'creeperbit-woo-accordion'),
+                        'all' => __('All Open', 'creeperbit-woo-accordion'),
+                        'folded' => __('All Folded', 'creeperbit-woo-accordion'),
                     ),
                     'id' => 'woot2a[mode]',
                     'default' => 'first',
                     'desc_tip' => true,
                 ),
                 array(
-                    'title' => __('Enable Collapsible', 'woo-tabs-accordion'),
-                    'desc' => __('Check to open multiple accordions together', 'woo-tabs-accordion'),
+                    'title' => __('Enable Collapsible', 'creeperbit-woo-accordion'),
+                    'desc' => __('Check to open multiple accordions together', 'creeperbit-woo-accordion'),
                     'type' => 'checkbox',
                     'id' => 'woot2a[multiple_expand]',
                     'default' => 'no',
                 ),
                 array(
-                    'title' => __('Title Background Color', 'woo-tabs-accordion'),
+                    'title' => __('Title Background Color', 'creeperbit-woo-accordion'),
                     'id' => 'woot2a[bg_title_color]',
                     'type' => 'text',
                     'default' => '#666666',
@@ -100,7 +100,7 @@ class WooT2A_Settings_Page extends WC_Settings_Page
                     'desc_tip' => true,
                 ),
                 array(
-                    'title' => __('Active Title Background Color', 'woo-tabs-accordion'),
+                    'title' => __('Active Title Background Color', 'creeperbit-woo-accordion'),
                     'id' => 'woot2a[bg_title_color_active]',
                     'type' => 'text',
                     'default' => '#000000',
@@ -112,7 +112,7 @@ class WooT2A_Settings_Page extends WC_Settings_Page
                     'desc_tip' => true,
                 ),
                 array(
-                    'title' => __('Title Color', 'woo-tabs-accordion'),
+                    'title' => __('Title Color', 'creeperbit-woo-accordion'),
                     'id' => 'woot2a[title_color]',
                     'type' => 'text',
                     'default' => '#fff',
@@ -124,7 +124,7 @@ class WooT2A_Settings_Page extends WC_Settings_Page
                     'desc_tip' => true,
                 ),
                 array(
-                    'title' => __('Active Title Color', 'woo-tabs-accordion'),
+                    'title' => __('Active Title Color', 'creeperbit-woo-accordion'),
                     'id' => 'woot2a[title_color_active]',
                     'type' => 'text',
                     'default' => '#fff',
@@ -136,7 +136,7 @@ class WooT2A_Settings_Page extends WC_Settings_Page
                     'desc_tip' => true,
                 ),
                 array(
-                    'title' => __('Arrow Color', 'woo-tabs-accordion'),
+                    'title' => __('Arrow Color', 'creeperbit-woo-accordion'),
                     'id' => 'woot2a[arrow_color]',
                     'type' => 'text',
                     'default' => '#fff',
@@ -148,7 +148,7 @@ class WooT2A_Settings_Page extends WC_Settings_Page
                     'desc_tip' => true,
                 ),
                 array(
-                    'title' => __('Active Arrow Color', 'woo-tabs-accordion'),
+                    'title' => __('Active Arrow Color', 'creeperbit-woo-accordion'),
                     'id' => 'woot2a[arrow_color_active]',
                     'type' => 'text',
                     'default' => '#fff',
@@ -170,7 +170,7 @@ class WooT2A_Settings_Page extends WC_Settings_Page
     public function enable_alpha_channel_wp_color_picker()
     {
         wp_enqueue_style('wp-color-picker');
-        wp_register_script('wp-color-picker-alpha', WOOT2A_URL . 'assets/js/wp-color-picker-alpha.js', array('wp-color-picker'), $current_version, $in_footer);
+        wp_register_script('wp-color-picker-alpha', WOOT2A_URL . 'assets/js/wp-color-picker-alpha.js', array('wp-color-picker'), WOOT2A_PLUGIN_VERSION, true); 
         wp_add_inline_script(
             'wp-color-picker-alpha',
             'jQuery( function() { jQuery( ".color-picker" ).wpColorPicker(); } );'

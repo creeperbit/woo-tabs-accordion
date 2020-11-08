@@ -1,12 +1,11 @@
 <?php
 /*
- * Plugin Name: WooCommerce Tabs Accordion
- * Plugin URI: https://wordpress.org/plugins/woo-tabs-accordion/
- * Description: WooCommerce Tabs Accordion converts the default WooCommerce product page tabs into an accordion.
+ * Plugin Name: CreeperBit Accordion Tabs for WooCommerce
+ * Description: CreeperBit Accordion Tabs for WooCommerce converts the default product page tabs into an accordion.
  * Version: 1.0.0
  * Author: CreeperBit
  * Author URI: https://creeperbit.com/
- * Text Domain: woo-tabs-accordion
+ * Text Domain: creeperbit-woo-accordion
  * Requires at least: 4.7
  * Tested up to: 5.5.1
  * Requires PHP: 5.6
@@ -25,8 +24,8 @@ if (!defined('WOOT2A_PLUGIN_FILE')) {
 // Include the Composer autoload file
 require plugin_dir_path(__FILE__) . 'vendor/autoload.php';
 
-// Include the main WooTabsAccordion class.
-if (!class_exists('WooTabsAccordion', false)) {
-    include_once dirname(WOOT2A_PLUGIN_FILE) . '/includes/class-woo-tabs-accordion.php';
-    WooTabsAccordion::instance();
+// Include the main WooAccordion class.
+if (!class_exists('WooAccordion', false)) {
+    include_once dirname(WOOT2A_PLUGIN_FILE) . '/includes/class-woo-accordion.php';
+    WooAccordion::instance();
 }

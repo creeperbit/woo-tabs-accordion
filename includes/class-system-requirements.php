@@ -13,7 +13,7 @@ class SystemRequirements {
 	 *
 	 * @var string The minimum version required for the plugin
 	 */
-	private static $wp_minimum_version = '4.7';
+	private static $wp_minimum_version = '4.5';
 
 	/**
 	 * Php Minimum Version Required
