@@ -71,8 +71,8 @@ class WooT2A_Template
 
         $inline_css = ".drawer .accordion-header { background-color:{$this->options['bg_title_color']};}";
         $inline_css .= ".drawer .accordion-item-active .accordion-header { background-color:{$this->options['bg_title_color_active']};}";
-        $inline_css .= ".drawer .accordion-header h1 { color:{$this->options['title_color']};}";
-        $inline_css .= ".drawer .accordion-item-active .accordion-header h1{ color:{$this->options['title_color_active']};}";
+        $inline_css .= ".drawer .accordion-header .accordion-title { color:{$this->options['title_color']};}";
+        $inline_css .= ".drawer .accordion-item-active .accordion-header .accordion-title { color:{$this->options['title_color_active']};}";
         $inline_css .= ".drawer .accordion-header-icon { color:{$this->options['arrow_color']}; }";
         $inline_css .= ".drawer .accordion-header-icon.accordion-header-icon-active { color:{$this->options['arrow_color_active']};}";
 
@@ -156,6 +156,12 @@ class WooT2A_Template
 
         $template_name = apply_filters('woot2a_get_template', $template_name);
         $product_tabs = apply_filters('woocommerce_product_tabs', array());
+
+        $title_tag = apply_filters('woot2a_title_tag', $this->options['title_tag']);
+
+        if (!$title_tag) {
+            $title_tag = 'h3';
+        }
 
         ob_start();
         include_once WOOT2A_ABSPATH . 'templates/' . sanitize_key($template_name) . '/content.php';

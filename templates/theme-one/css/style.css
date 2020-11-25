@@ -13,10 +13,11 @@
 .theme-one .accordion-header {
     border-top: 1px solid;
     cursor: pointer;
+    position: relative;
     transition: .5s;
 }
 
-.theme-one .accordion-header h1 {
+.theme-one .accordion-header .accordion-title {
     margin: 0;
     padding: 25px 0;
 }
@@ -31,11 +32,12 @@
 }
 
 .theme-one .accordion-header-icon {
-    font-size: 30pt;
+    font-size: 40px;
     right: 2px;
     transition: .5s;
-    margin-top: -85px;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 [dir='rtl'] .theme-one .accordion-header-icon {
@@ -44,8 +46,8 @@
 }
 
 .theme-one .accordion-header-icon.accordion-header-icon-active {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg) translate(-110%, -35%);
+    -ms-transform: rotate(45deg) translate(-110%, -35%);
+    transform: rotate(45deg) translate(-110%, -35%);
     transition: .5s;
 }

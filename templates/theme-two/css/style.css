@@ -10,9 +10,10 @@
 .theme-two .accordion-header {
     cursor: pointer;
     padding: 0 15px;
+    position: relative;
 }
 
-.theme-two .accordion-header h1 {
+.theme-two .accordion-header .accordion-title {
     margin: 0;
     padding: 15px 0;
 }
@@ -30,18 +31,17 @@
 
 .theme-two .accordion-header-icon {
     font-family: Helvetica;
-    font-size: 25pt;
-    line-height: 16pt;
+    font-size: 35px;
+    line-height: .6em;
     height: 35px;
     right: 20px;
-    margin-top: -58px;
     position: absolute;
     text-align: center;
+    top: 50%;
     width: 35px;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
 }
+
+.theme-two .accordion-header-icon
 
 [dir='rtl'] .theme-two .accordion-header-icon {
     right: auto;
@@ -49,8 +49,13 @@
 }
 
 .theme-two .accordion-header-icon.accordion-header-icon-active {
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    margin-top: -58px;
+    -webkit-transform: rotate(-90deg) translateX(50%);
+    -ms-transform: rotate(-90deg) translateX(50%);
+    transform: rotate(-90deg) translateX(50%);
+}
+
+.theme-two .accordion-header-icon:not(.accordion-header-icon-active) {
+    -webkit-transform: rotate(90deg) translateX(-50%);
+    -ms-transform: rotate(90deg) translateX(-50%);
+    transform: rotate(90deg) translateX(-50%);
 }

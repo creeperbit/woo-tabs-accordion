@@ -88,6 +88,21 @@ class WooT2A_Settings_Page extends WC_Settings_Page
                     'default' => 'no',
                 ),
                 array(
+                    'title' => __('Title Tag', 'creeperbit-woo-accordion'),
+                    'desc' => __('Define HTML header tag.', 'creeperbit-woo-accordion'),
+                    'type' => 'select',
+                    'options' => array(
+                        'h1' => 'H1',
+                        'h2' => 'H2',
+                        'h3' => 'H3',
+                        'h4' => 'H4',
+                        'h5' => 'H5',
+                        'h6' => 'H6',
+                    ),
+                    'id' => 'woot2a[title_tag]',
+                    'default' => 'h4',
+                ),
+                array(
                     'title' => __('Title Background Color', 'creeperbit-woo-accordion'),
                     'id' => 'woot2a[bg_title_color]',
                     'type' => 'text',

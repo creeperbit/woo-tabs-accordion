@@ -8,12 +8,12 @@
                 slideSpeed: 500,
                 dropDownIcon: '&#43'
             }, options);
-            $(this).children("h1").each(function() {
+            $(this).children(".accordion-title").each(function() {
                 $(this).next('div').andSelf().wrapAll("<div class='accordion-item'></div>");
             });
             $(this).children().children('div').addClass("accordion-content");
-            $(this).find("h1").wrap("<div class='accordion-header'></div>");
-            $(this).find("h1").after("<div class='accordion-header-icon'>" + settings.dropDownIcon + "</div>");
+            $(this).find(".accordion-title").wrap("<div class='accordion-header'></div>");
+            $(this).find(".accordion-title").after("<div class='accordion-header-icon'>" + settings.dropDownIcon + "</div>");
             $(this).children('.accordion-item').wrap('<div class="drawer"></div>');
             if (settings.firstChildExpand == true) {
                 $(this).find(".accordion-header:first").toggleClass("accordion-header-active");
