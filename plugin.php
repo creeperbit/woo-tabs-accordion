@@ -2,7 +2,7 @@
 /*
  * Plugin Name: CreeperBit Accordion Tabs for WooCommerce
  * Description: CreeperBit Accordion Tabs for WooCommerce converts the default product page tabs into an accordion.
- * Version: 1.0.1
+ * Version: 1.1.0
  * Author: CreeperBit
  * Author URI: https://creeperbit.com/
  * Text Domain: creeperbit-woo-accordion

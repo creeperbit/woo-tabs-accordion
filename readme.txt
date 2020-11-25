@@ -76,7 +76,7 @@ If you love this plugin and want to help others, please [__post a review__](http
 
 == Changelog ==
 
-= 1.0.1 =
+= 1.1.0 =
 * Improving SEO. Added settings to define the accordion title tag.
 
 = 1.0.0 =
